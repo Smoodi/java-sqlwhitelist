@@ -1,0 +1,11 @@
+name: SQLWhitelist
+version: 1.0.0
+description: Whitelist based on SQL table.
+# We could place every author in the authors list, but chose not to for illustrative purposes
+# Also, having an author distinguishes that person as the project lead, and ensures their
+# name is displayed first
+author: Smoodi
+website: http://www.smoodi.de/
+
+main: de.smoodi.chipbot.Main
+database: true

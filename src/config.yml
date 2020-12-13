@@ -1,0 +1,5 @@
+sql-host: localhost
+sql-db: dbname
+sql-port: 35450
+sql-user: user
+sql-pw: coolpw

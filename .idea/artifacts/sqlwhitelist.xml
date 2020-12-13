@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sqlwhitelist">
+    <output-path>$USER_HOME$/Downloads/note/plugins</output-path>
+    <root id="archive" name="sqlwhitelist.jar">
+      <element id="module-output" name="ChipBotMinecraftPlugin" />
+    </root>
+  </artifact>
+</component>
