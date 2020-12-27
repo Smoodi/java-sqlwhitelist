@@ -35,8 +35,15 @@ public class SQLBridge {
         PreparedStatement stm = con.prepareStatement("SELECT * FROM whitelisted_players WHERE UUID=\""+uuid.toString()+"\"");
         if(stm.execute()) {
             ResultSet r = stm.getResultSet();
-            if(!r.next()) return null;
-            return new UserProfile(uuid, r.getLong("DiscordID"), r.getBoolean("IsWhitelisted"), r.getString("Nickname"), r.getTimestamp("TimeAdded"), r.getBoolean("Banned"));
+            if(!r.next()) {
+                stm.close();
+                r.close();
+                return null;
+            }
+            UserProfile p = new UserProfile(uuid, r.getLong("DiscordID"), r.getBoolean("IsWhitelisted"), r.getString("Nickname"), r.getTimestamp("TimeAdded"), r.getBoolean("Banned"));
+            stm.close();
+            r.close();
+            return p;
         };
 
         return null;

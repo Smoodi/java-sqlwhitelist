@@ -36,12 +36,12 @@ public class WhitelistingManager implements Listener {
                 ev.setKickMessage(ChatColor.BOLD + "" + ChatColor.RED + "It seems like you are not a registered patreon user or your Minecraft account is not fully linked." + ChatColor.RESET + "\nPlease make sure to join the Chipflake" +
                         " Patreon and link your minecraft account with the according bot.");
             }
+            up = null;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
 
             ev.setKickMessage(ChatColor.BOLD + "" + ChatColor.RED + "It seems like there has been an internal server error when communicating with the white-list server."+ChatColor.RESET+"\nPlease contact a server admin about this issue in order for them to resolve it.");
         }
-
 
     }
 
